@@ -13,7 +13,8 @@ class ArticleListSerializers(serializers.ModelSerializer):
 
 
 class ArticleDetailSerializers(serializers.ModelSerializer):
-    categories = serializers.SlugRelatedField(slug_field='name', read_only=True)
+    #categories = serializers.SlugRelatedField(slug_field='name', read_only=True)
+
     class Meta:
         model = Article
         exclude = ('published',)
