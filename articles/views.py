@@ -1,7 +1,7 @@
 from rest_framework import generics
 
 from .models import Article
-from .serializers import ArticleListSerializers, ArticleDetailSerializers, ArticleCreateSerializer
+from .serializers import ArticleListSerializers, ArticleDetailSerializers
 
 
 class ArticleListView(generics.ListAPIView):
@@ -15,4 +15,4 @@ class ArticleDetailView(generics.RetrieveUpdateDestroyAPIView):
 
 
 class ArticleCreateView(generics.CreateAPIView):
-    serializer_class = ArticleCreateSerializer
+    serializer_class = ArticleDetailSerializers

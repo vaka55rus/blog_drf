@@ -13,9 +13,3 @@ class ArticleDetailSerializers(serializers.ModelSerializer):
     class Meta:
         model = Article
         fields = '__all__'
-
-
-class ArticleCreateSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Article
-        fields = '__all__'
