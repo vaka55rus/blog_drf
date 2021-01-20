@@ -6,15 +6,16 @@ from articles.models import Article
 class ArticleListSerializers(serializers.ModelSerializer):
     class Meta:
         model = Article
-        fields = (
-            'title','body','categories',
-            'date_create'
-        )
+        fields = ('title',)
 
 
 class ArticleDetailSerializers(serializers.ModelSerializer):
-    #categories = serializers.SlugRelatedField(slug_field='name', read_only=True)
-
     class Meta:
         model = Article
-        exclude = ('published',)
+        fields = '__all__'
+
+
+class ArticleCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Article
+        fields = '__all__'
