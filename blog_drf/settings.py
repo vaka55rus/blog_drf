@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'articles.apps.ArticlesConfig',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +70,8 @@ TEMPLATES = [
     },
 ]
 
+AUTH_USER_MODEL = 'users.User'
+
 WSGI_APPLICATION = 'blog_drf.wsgi.application'
 
 
@@ -78,7 +81,7 @@ WSGI_APPLICATION = 'blog_drf.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'drfdb',
+        'NAME': 'drfdb1',
         'USER': 'postgres',
         'PASSWORD': '1234',
         'HOST': 'localhost',
